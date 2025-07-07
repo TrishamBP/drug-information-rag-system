@@ -157,22 +157,33 @@ sequenceDiagram
 
 ```mermaid
 graph LR
-    A[Original Query:<br/>"Side effects of amoxicillin"] --> B[Multi-Query Generator]
+    A["🔍 Original Query:<br/>Side effects of amoxicillin"] --> B[🧠 Multi-Query Generator<br/>GPT-4o-mini]
 
-    B --> C1["What adverse reactions<br/>are associated with amoxicillin?"]
-    B --> C2["What are the common<br/>side effects of amoxicillin?"]
-    B --> C3["Are there any contraindications<br/>for amoxicillin use?"]
-    B --> C4["What warnings should patients<br/>know about amoxicillin?"]
-    B --> C5["What are the safety concerns<br/>with amoxicillin therapy?"]
+    B --> C1["❓ Query 1:<br/>What adverse reactions are<br/>associated with amoxicillin?"]
+    B --> C2["❓ Query 2:<br/>What are the common<br/>side effects of amoxicillin?"]
+    B --> C3["❓ Query 3:<br/>Are there contraindications<br/>for amoxicillin use?"]
+    B --> C4["❓ Query 4:<br/>What warnings should patients<br/>know about amoxicillin?"]
+    B --> C5["❓ Query 5:<br/>What safety concerns exist<br/>with amoxicillin therapy?"]
 
-    C1 --> D[Vector Search]
-    C2 --> D
-    C3 --> D
-    C4 --> D
-    C5 --> D
+    C1 --> D1[📊 Vector Search 1<br/>Results: 5 docs]
+    C2 --> D2[📊 Vector Search 2<br/>Results: 5 docs]
+    C3 --> D3[📊 Vector Search 3<br/>Results: 5 docs]
+    C4 --> D4[📊 Vector Search 4<br/>Results: 5 docs]
+    C5 --> D5[📊 Vector Search 5<br/>Results: 5 docs]
 
-    D --> E[Document Deduplication]
-    E --> F[Final Answer Generation]
+    D1 --> E[🔄 Document Deduplication<br/>Unique Union Algorithm]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+    D5 --> E
+
+    E --> F[📝 Final Document Set<br/>12-15 unique documents]
+    F --> G[🤖 Answer Generation<br/>Comprehensive Response]
+
+    style A fill:#ffeb3b,stroke:#f57f17,stroke-width:2px
+    style B fill:#2196f3,stroke:#0d47a1,stroke-width:2px
+    style E fill:#4caf50,stroke:#1b5e20,stroke-width:2px
+    style G fill:#ff9800,stroke:#e65100,stroke-width:2px
 ```
 
 ## 🚀 Quick Start
@@ -885,40 +896,6 @@ CMD ["python", "drug_rag_ui.py"]
 - **AWS ECS**: Scalable container service
 - **Azure Container Instances**: Serverless containers
 
-## 📊 API Documentation
-
-### REST API Endpoints
-
-```python
-# Query endpoint
-POST /api/query
-{
-    "question": "What are the side effects of amoxicillin?",
-    "k": 5,
-    "response_format": "comprehensive",
-    "include_sources": true
-}
-
-# Health check
-GET /api/health
-{
-    "status": "healthy",
-    "components": {
-        "vector_store": "healthy",
-        "llm": "healthy",
-        "openai_api": "configured"
-    }
-}
-
-# System statistics
-GET /api/stats
-{
-    "queries_processed": 247,
-    "average_response_time": 2.34,
-    "success_rate": 0.976
-}
-```
-
 ## 🤝 Contributing
 
 ### Development Setup
@@ -981,10 +958,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Issues**: [GitHub Issues](https://github.com/yourusername/drug-rag-project/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/yourusername/drug-rag-project/discussions)
 - **Documentation**: [Project Wiki](https://github.com/yourusername/drug-rag-project/wiki)
-- **Email**: your.email@example.com
+- **Email**: trishampatil@gmail.com
 
 ---
 
 **Built with ❤️ for the healthcare and AI community**
 
-_Last updated: January 2024_
+_Last updated: July 2025_
