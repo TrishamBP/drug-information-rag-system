@@ -500,23 +500,14 @@ Approval Details:
 
 #### Main Interface
 
-![Main Interface](screenshots/main_interface.png)
+![image](https://github.com/user-attachments/assets/b718f86e-9b42-4d3d-a406-8d0549f9246e)
+
 _Caption: Main query interface with sample questions and system status_
 
 #### Query Results
 
-![Query Results](screenshots/query_results.png)
+![image](https://github.com/user-attachments/assets/361d923a-c7f8-45bf-9c25-3bf8051135dc)
 _Caption: Comprehensive answer with source attribution and metadata_
-
-#### Structured Output
-
-![Structured Output](screenshots/structured_output.png)
-_Caption: JSON-formatted safety information for clinical queries_
-
-#### System Status
-
-![System Status](screenshots/system_status.png)
-_Caption: Real-time system health and performance monitoring_
 
 ## 🔧 Technical Implementation
 
